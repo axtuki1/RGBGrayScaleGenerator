@@ -1,0 +1,21 @@
+section {
+    margin: 20px 0;
+}
+
+section.main {
+    margin: 0 20px;
+}
+
+section.output {
+    display: flex;
+    flex-direction: row;
+    section.output-group {
+        width: auto;
+        flex: 1;
+        margin: 0 10px;
+        img {
+            height: auto;
+            background-color: #000;
+        }
+    }
+}

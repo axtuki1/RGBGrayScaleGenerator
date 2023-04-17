@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/base.min.css">
+    <link rel="stylesheet" href="./css/index.min.css">
+    <title>RGB GrayScale Generator</title>
+</head>
+
+<body>
+    <section class="main">
+        <h1>RGB"それぞれ"のグレースケール生成機</h1>
+        <p>UnityのLightにあるCookieに使いたいのでつくりました</p>
+        <hr>
+        <section class="interface">
+            <section class="input-area">
+                <section>
+                    ファイル名<br>
+                    <input type="text" id="name" value="test1.png" placeholder="ファイル名">
+                </section>
+                <section>
+                    画像設定<br>
+                    <input type="file" id="inputFile">
+                    Mask画像設定<br>
+                    <input type="file" id="inputMaskFile">
+                </section>
+            </section>
+        </section>
+        <button id="gen" onClick="gen()" class="btn">生成</button>
+        <section class="output">
+            <section class="output-group">
+                <img id="redImg">
+                <button onClick="dl(0)" class="btn">Red Download</button>
+            </section>
+            <section class="output-group">
+                <img id="greenImg">
+                <button onClick="dl(1)" class="btn">Green Download</button>
+            </section>
+            <section class="output-group">
+                <img id="blueImg">
+                <button onClick="dl(2)" class="btn">Blue Download</button>
+            </section>
+        </section>
+        <script src="js/index.js"></script>
+    </section>
+</body>
+
+</html>
