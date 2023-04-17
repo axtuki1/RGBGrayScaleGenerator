@@ -6,7 +6,7 @@ const imageGen = (image, maskImage) => {
     canvas.height = image.height;
     const context = canvas.getContext("2d");
     context.drawImage(image, 0, 0);
-    context.drawImage(maskImage, 0, 0, maskImage.width, maskImage.height, 0, 0, canvas.width, canvas.height);
+    if(maskImage != null) context.drawImage(maskImage, 0, 0, maskImage.width, maskImage.height, 0, 0, canvas.width, canvas.height);
 
     let imageData = context.getImageData(0, 0, canvas.width, canvas.height);
     let data = imageData.data;
@@ -21,7 +21,7 @@ const imageGen = (image, maskImage) => {
     document.getElementById("redImg").src = canvas.toDataURL("image/png");
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(image, 0, 0);
-    context.drawImage(maskImage, 0, 0, maskImage.width, maskImage.height, 0, 0, canvas.width, canvas.height);
+    if(maskImage != null) context.drawImage(maskImage, 0, 0, maskImage.width, maskImage.height, 0, 0, canvas.width, canvas.height);
 
     imageData = context.getImageData(0, 0, canvas.width, canvas.height);
     data = imageData.data;
@@ -36,7 +36,7 @@ const imageGen = (image, maskImage) => {
     document.getElementById("greenImg").src = canvas.toDataURL("image/png");
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.drawImage(image, 0, 0);
-    context.drawImage(maskImage, 0, 0, maskImage.width, maskImage.height, 0, 0, canvas.width, canvas.height);
+    if(maskImage != null) context.drawImage(maskImage, 0, 0, maskImage.width, maskImage.height, 0, 0, canvas.width, canvas.height);
 
     imageData = context.getImageData(0, 0, canvas.width, canvas.height);
     data = imageData.data;
