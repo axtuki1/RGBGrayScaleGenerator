@@ -8,6 +8,8 @@ const imageGen = (image, maskImage) => {
     context.drawImage(image, 0, 0);
     if(maskImage != null) context.drawImage(maskImage, 0, 0, maskImage.width, maskImage.height, 0, 0, canvas.width, canvas.height);
 
+    document.getElementById("preview").src = canvas.toDataURL("image/png");
+
     let imageData = context.getImageData(0, 0, canvas.width, canvas.height);
     let data = imageData.data;
 

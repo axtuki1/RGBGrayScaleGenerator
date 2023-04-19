@@ -22,13 +22,16 @@
                 <section>
                     画像設定<br>
                     <input type="file" id="inputFile">
-                    Mask画像設定<br>
+                    上に乗せる画像設定<br>
                     <input type="file" id="inputMaskFile">
                 </section>
             </section>
         </section>
         <button id="gen" onClick="gen()" class="btn">生成</button>
         <section class="output">
+            <section class="output-group">
+                <img id="preview">
+            </section>
             <section class="output-group">
                 <img id="redImg">
                 <button onClick="dl(0)" class="btn">Red Download</button>
